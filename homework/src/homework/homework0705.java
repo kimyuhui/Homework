@@ -3,7 +3,7 @@ package homework;
 public class homework0705 {
 
 	public static void main(String[] args) {
-		System.out.println("æ»≥Á");
+		System.out.println("æ»≥Á«œººø‰");
 
 	}
 
