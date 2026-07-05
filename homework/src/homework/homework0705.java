@@ -1,11 +1,148 @@
 package homework;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class homework0705 {
 
 	public static void main(String[] args) {
-		System.out.println("ì•ˆë…• ");
-		System.out.println(System.getProperty("file.encoding"));
+		Scanner sc = new Scanner(System.in);	
+		Random r = new Random();				
+		
+		
+		System.out.println("             ¡×¡×¡× ¿µÈ­°ü ¡×¡×¡×");
+		System.out.println();
+		System.out.println();
+		System.out.println("               ÁÂ¼® ¼±ÅÃ");
+		System.out.println("----------------------------------------");
+		System.out.println("   A   B   C   D   E   F   G   H   I   J");
+		
+		
+		char sit[][] = new char[5][10]; 	
+		for(int i = 0; i < 5; i++) {		
+			for(int j = 0; j < 10; j++) {	
+				sit[i][j] = '¡à';			
+			}
+		}								
+		
+		// 5¿­ 10ÇàÀÇ ÁÂ¼®
+		// i°¡ trueÀÏ ¶§ ¾Æ·¡ÀÇ for¹®ÀÌ ½ÃÇàµÈ´Ù -> 0~4·Î ÃÑ 5¹ø
+		// j°¡ trueÀÏ ¶§ ¾Æ·¡ÀÇ ½ÄÀÌ ½ÃÇàµÊ -> 0~9·Î ÃÑ 10¹ø
+		// sit[0~4][0~9]¿¡ ÇØ´çÇÏµµ·Ï ³×¸ð·Î ÁÂ¼®À» ¹èÄ¡ÇÔ
+		
+		/* ±Ùµ¥ ÇÁ·Î±×·¡¹Ö ¼ýÀÚ´Â 0ºÎÅÍ ¼¼´Âµ¥
+		¿Ö À§ÀÇ ¹è¿­Àº [5][10]À¸·Î ¼±¾ðÇÒ±î
+		5¿­ 10ÇàÀ» ¸¸µé°í ½ÍÀ¸¸é [4][9]°¡ ¾Æ´Ò±î*/
+		
+		
+		
+		String[] A = {"¿¹¾à°¡´É", "¿¹¾àºÒ°¡"};
 
+		
+	
+//		int w = r.nextInt(0,9); 			/* ·£´ýÀ¸·Î ¿¹¸ÅµÈ ÁÂ¼®À» ¸¸µé·Á°í
+//		int h = r.nextInt(0,4); 			   ¿­°ú Çà¿¡ ·£´ýÇÑ Á¤¼ö¸¦ ÁÖ±â À§ÇØ nextInt¸¦ »ç¿ëÇÔ
+//		sitArr[h][w] = '¡á'; 					°ýÈ£ ¾ÈÀÇ ¼ýÀÚ Áß¿¡¼­ ·£´ýÀ¸·Î °í¸¥´Ù */
+//
+//		for(int k = 0; k < 8; k++) { 		/* ÇÏÁö¸¸ ÀÌ·¸°Ô Çß´õ´Ï ÇÏ³ªÀÇ ÁÂ¼®¸¸ ·£´ýÀ¸·Î ÁöÁ¤µÊ
+//	 		sitArr[h][w] = '¡á';					h¿Í w¸¦ ·£´ýÇÑ °ªÀ¸·Î ¼³Á¤Çß¾îµµ À§¿¡¼­ ÀÌ¹Ì Á¤ÇØÁ³±â ¶§¹®¿¡
+//		}										±×°Í¸¸ 8¹ø ¹Ýº¹ÇÔ */
+											
+		
+		
+		
+		for(int k = 0; k < 8; k++) {		
+		    int w = r.nextInt(0, 9); 	    
+		    int h = r.nextInt(0, 4); 		
+		    sit[h][w] = '¡á';				
+		}
+		
+		// ±×·¡¼­ for¹®À¸·Î int k°¡ trueÀÏ ¶§
+		// ·£´ýÀ¸·Î w¿Í h¿¡ Á¤¼ö°ªÀÌ Á¤ÇØÁöµµ·Ï ÇÔ
+		// ±×¸®°í ÇØ´çÇÏ´Â ÁÂ¼®ÀÌ °ËÀº ³×¸ð·Î Ä¥ÇØÁöµµ·Ï ÇÔ
+		// ¿¹¾àºÒ°¡ ÁÂ¼®ÀÇ °³¼öµµ ·£´ýÇÏ°Ô ÇÏ°í ½Í¾ú´Âµ¥ ±×°Í±îÁö´Â ¸øÇß´Ù
+		
+		
+		
+		for (int i = 0; i < 5; i++) {		// ÁÂ¼® ÀÌ¸§À» º¸±â Æí¸®ÇÏ°Ô ÇÏ±â À§ÇØ
+			for (int k = i; k == i; k++) {	// ¿­°ú Çà¿¡ ¾ËÆÄºª, ¼ýÀÚ°¡ º¸ÀÌµµ·Ï ÇÔ
+				System.out.print(i+1);
+			}
+			for(int j = 0; j < 10; j++) {
+				System.out.printf("%3c ", sit[i][j]); // Ä­ÀÌ ´Ù´Ú´Ù´Ú ºÙ¾îÀÖÁö ¾Ê°í ÇÑÄ­¾¿ ¶ç¾îÁöµµ·Ï ÇÔ
+			}
+			System.out.println();
+		}
+		
+	
+		
+		System.out.println("----------------------------------------");
+		System.out.println();
+		System.out.print("¸î ÁÂ¼® ¿¹¸ÅÇÏ½Ã³ª¿ä? ");
+		int answer = sc.nextInt();
+		System.out.println("ÀÔ·ÂÇÑ ÁÂ¼® ¼ö: " + answer);
+		System.out.println();
+		System.out.println("ÁÂ¼®À» ¼±ÅÃÇØÁÖ¼¼¿ä (A1 ~ J5)");
+		
+		
+		String[] select = new String[answer]; 
+		int alp = 0; 
+		// ÁÂ¼®À» ¼±ÅÃÇÏ¸é À§ÀÇ answer ¼ö¸¸Å­ ¹®ÀÚ¿­ °³¼ö ÀúÀåÇÏ±â
+		// ÁÂ¼®À» ¼ýÀÚ·Î ¼±¾ðÇß±â ¶§¹®¿¡ ¾ËÆÄºªµµ ¼ýÀÚ·Î ¹Ù²Ù±â À§ÇØ alp º¯¼ö ¼±¾ð
+		
+		for(int i = 0; i < answer; i++) {
+		System.out.print("Çà(A~J): ");
+		String answer1 = sc.next();
+		switch(answer1) {
+		case "A": 
+			alp = 0;
+			break;
+			
+		case "B":
+			alp = 1;
+			break;
+			
+		case "C":
+			alp = 2;
+			break;
+			
+		case "D":
+			alp = 3;
+			break;
+		
+		case "E":
+			alp = 4;
+			break;
+			
+		case "F":
+			alp = 5;
+			break;
+			
+		case "G":
+			alp = 6;
+			break;
+			
+		case "H":
+			alp = 7;
+			break;
+			
+		case "I":
+			alp = 8;
+			break;
+			
+		case "J":
+			alp = 9;
+			break;
+		} //switch º¯¼ö·Î ¾ËÆÄºªÀ» ¼ýÀÚ·Î º¯È¯ÇÔ 
+		System.out.print("¿­(1~5): ");
+		int answer2 = sc.nextInt();
+		select[i] = answer1 + answer2; 
+		if(sit[answer2 - 1][alp] == '¡á') { //ÀÔ·ÂÇÑ ÁÂ¼®ÀÌ ¡á ÁÂÇ¥¿Í °°À¸¸é ¾Æ·¡ ¹®±¸°¡ Ãâ·ÂµÇµµ·Ï ÇÔ
+			System.out.println("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù");
+		} 
+		}
+
+		
 	}
 
 }
