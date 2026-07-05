@@ -3,7 +3,8 @@ package homework;
 public class homework0705 {
 
 	public static void main(String[] args) {
-		System.out.println("¾È³çÇÏ¼¼¿ä ");
+		System.out.println("ì•ˆë…• ");
+		System.out.println(System.getProperty("file.encoding"));
 
 	}
 
